@@ -121,10 +121,12 @@ body {
     cursor: pointer;
     font-weight: 650;
 }
+.login a{
+    align-self: center;
+}
 .login .sign-up{
     color: #999999;
     padding: 8px 32px 8px 8px;
-
 }
 .login .log-in{
     background-color: #fff;
