@@ -62,7 +62,98 @@ body{
 .login-form{
     width: 324px;
 }
-
+.login-info{
+    margin-bottom: 30px;
+}
+.name-info{
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.name-info-text p{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.name-info-input{
+    background-color: transparent;
+    border: 1px solid #9f9f9f;
+    font-size: 17px;
+    padding: 12px;
+    border-radius: 5px;
+    outline: none;    
+    flex: 1;
+}
+.name-info-input::placeholder{
+    color: #9f9f9f;
+    font-size: 16px;
+}
+.name-info-input:hover{
+    border-color: #fff;
+}
+.name-info-input:focus{
+    border: 3px solid #fff;
+}
+.name-info-input-class {
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+.show-password {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -8px;
+    outline: none;
+}
+.show-password:active .password-icon path {
+    stroke: #fff; 
+    stroke-width: 2.5; 
+}
+.password-icon {
+    width: 24px;
+    height: 24px;
+    transition: stroke 0.2s ease, stroke-width 0.2s ease;
+}
+.login-button{
+    margin-bottom: 40px;
+}
+.login-button button{
+    background-color: #1ed760;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    padding: 14px 0px;
+    border-radius: 500px;
+}
+.login-button button:hover{
+    scale: 1.03;
+    transition: all 0.3s ease;
+}
+.login-forget{
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.login-forget a:hover{
+    color: #1ed760;
+}
+.sign-up-section{
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+.sign-up-section p{
+    color: #9f9f9f;
+}
+.sign-up-section p a:hover{
+    color: #1ed760;
+}
 .container-footer{
     background-color: #121212;
     justify-content:  center;
