@@ -10,6 +10,7 @@ body {
 }
 .container{
     padding: 8px;
+    position: relative;
 }
 .navbar{
     height:64px;
@@ -202,7 +203,6 @@ body {
 }
 .section::-webkit-scrollbar {
     opacity: 0; 
-    z-index: 1;
     scrollbar-width: thin;
 }
 .section:hover{
@@ -530,8 +530,6 @@ body {
 .right-footer-bottom{
     padding: 16px 0px 0px;
 }
-
-
 .footer{
     width: 100%;
     max-width: 1518px;
@@ -561,3 +559,82 @@ body {
     transition: scale 0.2s ease;
     cursor: inherit;
 }
+.container-lang{
+    width: 99%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+}
+.lang-area{
+    margin-top: 2%;
+    width: 60vw;
+    height: 35vw;
+    background-color: rgba(40,40,40,1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.lang-area-top{
+    padding: 16px 24px 0px;
+    justify-content: space-between;
+    border-bottom: 0.1px solid #b3b3b33a;
+}
+.lang-area-text h1{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.lang-area-text p{
+    font-size: 14px;
+    padding: 0 0 16px;
+}
+.lang-area-top button{
+    background-color: #000000b3;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.lang-area-top button img{
+    height: 16px;
+}
+.lang-area-bottom{
+    height: 100%;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(20,19%);
+    overflow: scroll;
+}
+.lang-area-bottom-button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    padding: 16px;
+}
+.lang-area-bottom-button:hover{
+    background-color: #3a3939;
+}
+.lang-area-bottom-button span{
+    font-size: 16px;
+    font-weight: bold;
+}
+.lang-area-bottom-span{
+    color: #b3b3b3;
+}
+.lang-area-bottom::-webkit-scrollbar {
+    opacity: 0; 
+    scrollbar-width: thin;
+}
+.lang-area-bottom:hover{
+    opacity: 1;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent; 
+}
+
