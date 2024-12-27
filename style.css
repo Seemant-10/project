@@ -565,7 +565,6 @@ body {
     position: absolute;
     top: 0;
     background-color: rgba(0,0,0,0.7);
-    justify-content: center;
 }
 .lang-area{
     margin-top: 2%;
@@ -574,6 +573,7 @@ body {
     background-color: rgba(40,40,40,1);
     border-radius: 8px;
     overflow: hidden;
+    margin-left: 23%;
 }
 .lang-area-top{
     padding: 16px 24px 0px;
