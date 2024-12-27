@@ -571,7 +571,8 @@
                             <h1>Choose a language</h1>
                             <p>This updates what you read on open.spotify.com</p>
                         </div>
-                        <button class="flex" onclick="toggleVisibility()"><img src="svg/close-icon.svg" alt="close-icon"></button>
+                        <button class="flex" onclick="toggleVisibility()"><img src="svg/close-icon.svg"
+                                alt="close-icon"></button>
                     </div>
                     <div class="lang-area-bottom">
                         <button class="lang-area-bottom-button font">
@@ -807,13 +808,20 @@
             var div = document.getElementById("language-area");
 
             if (div.style.display === "none") {
-                div.style.display = "block";  
+                div.style.display = "block";
             } else {
                 div.style.display = "none";
             }
         }
 
+        const languageArea = document.getElementById('language-area');
+        function handleClickOutside(event) {
+            if (!languageArea.contains(event.target)) {
+                languageArea.style.display = 'none';
+            }
+        }
+        document.addEventListener('click', handleClickOutside);
+
     </script>
 </body>
-
 </html>
