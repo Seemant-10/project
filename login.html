@@ -49,13 +49,13 @@
                     </li>
                 </ul>
                 <hr class="container-content-inner-hr">
-                <div class="login-form">
+                <form class="login-form">
                     <div class="login-info">
                         <div class="name-info flex">
                             <div class="name-info-text white-text">
                                 <p>Email or username</p>
                             </div>
-                            <input class="name-info-input white-text" type="text" placeholder="Email or username">
+                            <input class="name-info-input white-text" type="text" placeholder="Email or username" required>
                         </div>
                         <div class="name-info flex">
                             <div class="name-info-text white-text">
@@ -63,7 +63,7 @@
                             </div>
                             <div class="name-info-input-class flex">
                                 <input id="password-input" class="name-info-input white-text" type="password"
-                                    placeholder="Password">
+                                    placeholder="Password" required>
                                 <button class="show-password" onclick="togglePasswordVisibility()">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="password-icon"
                                         fill="none">
@@ -82,7 +82,7 @@
                     <div class="login-forget flex">
                         <a href="forgot_password.html" class="font white-text">Forgot your password?</a>
                     </div>
-                </div>
+                </form>
                 <div class="sign-up-section flex">
                     <p>Don't have an account? <a href="sign-up.html" class="white-text">Signup for Spotify</a></p>
                 </div>
