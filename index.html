@@ -803,31 +803,26 @@
                 </div>
             </div>
         </div>
+        <div class="music-player">
+            <div class="music-player-inner flex">
+                <div class="song">
+
+                </div>
+                <div class="song-control">
+                    <div class="song-control-top">
+                        
+                    </div>
+                    <div class="song-control-bottom">
+
+                    </div>
+                </div>
+                <div class="song-options">
+
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        // Get the language-area div and the toggle button
-        const langArea = document.getElementById('lang-area');
-        const containerLang = document.getElementById('container-lang');
-        const languageToggle = document.getElementById('language-toggle');
-        const closeIcon = document.getElementById('close-icon');
-
-        function handleClickOutside(event) {
-            if (!langArea.contains(event.target) && event.target != langArea) {
-                containerLang.style.display = 'none';
-            }
-        }
-        languageToggle.addEventListener('click', function (event) {
-            event.stopPropagation();
-            containerLang.style.display = containerLang.style.display === 'block' ? 'none' : 'block';
-        });
-
-        closeIcon.addEventListener('click', function (event) {
-            event.stopPropagation();
-            containerLang.style.display = 'none';
-        });
-        document.addEventListener('click', handleClickOutside);
-    </script>
-
+    <script src="buttonToggle.js"></script>
 </body>
 
 </html>

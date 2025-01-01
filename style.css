@@ -12,6 +12,10 @@ body {
     padding: 8px;
     position: relative;
 }
+.container::-webkit-scrollbar { 
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent; 
+}
 .navbar{
     height:64px;
     margin:-8px;
@@ -397,7 +401,12 @@ body {
 .artist:hover .play-icon{
     opacity: 1;
     top: 90px;
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease-out;
+}
+.play-icon:hover{
+    scale: 1.029;
+    background-color: #56fb90;
+    transition: all 0.3s ease-in-out;
 }
 .artist .play-icon-inner{
     align-items: center;
@@ -637,4 +646,23 @@ body {
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.2) transparent; 
 }
+.music-player{
+    width: 100%;
+    max-width: 1518px;
+    height: 70px;
+    position: absolute;
+    bottom: 8px;
+    background-color: #000000;
+    /* opacity: 0; */
+}
+.music-player-inner{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
 
+
+
+.song-control{
+    
+}
