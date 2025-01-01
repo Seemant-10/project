@@ -662,7 +662,34 @@ body {
 }
 
 
-
 .song-control{
-    
+    align-items: center;
 }
+.song-control-top{
+    margin-top: 15px;
+    gap: 30px;
+}
+.song-control-top .shuffle-icon,
+.song-control-top .prev-icon,
+.song-control-top .next-icon,
+.song-control-top .loop-icon{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.song-control-top img{
+    height: 16px;
+    width: 16px;
+}
+.song-control-top .song-play-icon{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
