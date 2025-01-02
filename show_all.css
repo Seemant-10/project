@@ -1,0 +1,71 @@
+.artist-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+.Vishal .artist-image{
+    background-image: url(https://i.scdn.co/image/ab67616100005174fb13d10be20fdcb5a670f551);
+    width: 149.64px;
+    height: 149.64px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+.Diljit .artist-image{
+    background-image: url(https://i.scdn.co/image/ab67616100005174fc043bea91ac91c222d235c9);
+    width: 149.64px;
+    height: 149.64px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%; 
+}
+.Badshah .artist-image{
+    background-image: url(https://i.scdn.co/image/ab67616100005174eddbb664c4723f268a60d8c1);
+    width: 149.64px;
+    height: 149.64px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+.Shreya .artist-image{
+    background-image: url(https://i.scdn.co/image/ab6761610000517459303d54ce789210e745e1a9);
+    width: 149.64px;
+    height: 149.64px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+.Karan .artist-image{
+    background-image: url(https://i.scdn.co/image/ab676161000051747aa689cd7ca136098b26c20d);
+    width: 149.64px;
+    height: 149.64px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+.Darshan .artist-image{
+    background-image: url(https://i.scdn.co/image/ab67616100005174a80a803733f6a070e8f873fb);
+    width: 149.64px;
+    height: 149.64px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+.Sonu .artist-image{
+    background-image: url();
+    width: 149.64px;
+    height: 149.64px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+.Anuv .artist-image{
+    background-image: url(https://i.scdn.co/image/ab67616100005174a837a6cb82dd949d5e1f9b53);
+    width: 149.64px;
+    height: 149.64px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+.artist-container {
+    margin-left: 22px;
+}
