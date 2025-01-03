@@ -2,25 +2,18 @@ console.log("let's write some javascript");
 let currentSong = new Audio();
 
 async function getSongs() {
-    // URL to the raw GitHub folder
-    const repoUrl = 'https://raw.githubusercontent.com/Seemant-10/project/main/songs/';
-    
-    let response = await fetch(repoUrl);
-    let text = await response.text();
-    
-    let div = document.createElement("div");
-    div.innerHTML = text;
-    let as = div.getElementsByTagName("a");
+    const repoUrl = 'https://api.github.com/repos/Seemant-10/project/contents/songs';
 
-    let songs = [];
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/songs/")[1]);
-        }
-    }
+    let response = await fetch(repoUrl);
+    let data = await response.json();
+    
+    let songs = data
+        .filter(file => file.name.endsWith('.mp3'))  // Filter for mp3 files
+        .map(file => file.name);  // Get the file names
+
     return songs;
 }
+
 
 
 async function getSongDuration(songUrl) {
