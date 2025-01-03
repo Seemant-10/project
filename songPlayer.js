@@ -26,7 +26,7 @@ async function getSongDuration(songUrl) {
 }
 const playMusic = (track)=>{
     // let audio = new Audio("/songs/"+track+".mp3")
-    currentSong.src = "/songs/"+ track +".mp3"
+    currentSong.src = `https://Seemant-10.github.io/project/songs/${track}.mp3`
     currentSong.play()
     play.src = "svg/pause-icon.svg"
     document.querySelector(".song").innerHTML = track
