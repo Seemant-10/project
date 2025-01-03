@@ -2,11 +2,14 @@ console.log("let's write some javascript");
 let currentSong = new Audio();
 
 async function getSongs() {
-    let a = await fetch("http://127.0.0.1:5500/songs/");
-    let response = await a.text();
-    // console.log(response);
+    // URL to the raw GitHub folder
+    const repoUrl = 'https://raw.githubusercontent.com/Seemant-10/project/main/songs/';
+    
+    let response = await fetch(repoUrl);
+    let text = await response.text();
+    
     let div = document.createElement("div");
-    div.innerHTML = response;
+    div.innerHTML = text;
     let as = div.getElementsByTagName("a");
 
     let songs = [];
@@ -17,7 +20,8 @@ async function getSongs() {
         }
     }
     return songs;
-}   
+}
+
 
 async function getSongDuration(songUrl) {
     return new Promise((resolve) => {
