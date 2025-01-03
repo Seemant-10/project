@@ -103,6 +103,7 @@ async function main() {
         document.querySelector(".song-time-start").innerHTML = `${secondsToMinutesSecondes(currentSong.currentTime)}`
         document.querySelector(".song-time-end").innerHTML = `${secondsToMinutesSecondes(currentSong.duration)}`
         document.querySelector(".circle").style.left = (currentSong.currentTime/ currentSong.duration)* 100 + "%"
+        document.querySelector(".progress").style.width = (currentSong.currentTime/ currentSong.duration)* 100 + "%"
     })
 
     // seekbar event listener

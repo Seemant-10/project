@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="utility.css">
     <link rel="icon" href="https://open.spotify.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="artist-pritam.css">
+    <script src="songPlayer.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div class="navbar flex">
@@ -114,7 +117,51 @@
             <div class="right white-text font">
                 <div class="right-top">
                     <div class="right-content">
-                        
+                        <div class="first-container">
+                            <div class="pritam-img">
+                                <div class="content">
+                                    <div class="verified-container">
+                                        <svg data-encore-id="icon" role="img" aria-hidden="true" class="verified-icon"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M10.814.5a1.658 1.658 0 0 1 2.372 0l2.512 2.572 3.595-.043a1.658 1.658 0 0 1 1.678 1.678l-.043 3.595 2.572 2.512c.667.65.667 1.722 0 2.372l-2.572 2.512.043 3.595a1.658 1.658 0 0 1-1.678 1.678l-3.595-.043-2.512 2.572a1.658 1.658 0 0 1-2.372 0l-2.512-2.572-3.595.043a1.658 1.658 0 0 1-1.678-1.678l.043-3.595L.5 13.186a1.658 1.658 0 0 1 0-2.372l2.572-2.512-.043-3.595a1.658 1.658 0 0 1 1.678-1.678l3.595.043L10.814.5zm6.584 9.12a1 1 0 0 0-1.414-1.413l-6.011 6.01-1.894-1.893a1 1 0 0 0-1.414 1.414l3.308 3.308 7.425-7.425z">
+                                            </path>
+                                        </svg>
+                                        <span class="text1">Verified Artist</span>
+                                    </div>
+                                    <h1 class="text2">Pritam</h1>
+                                    <p class="text3">40,898,481 monthly listeners</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-section">
+                            <div class="controls">
+                              <button class="play-button">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                  <path d="M8 5v14l11-7z" fill="currentColor" />
+                                </svg>
+                              </button>
+                              <button class="follow-button">Follow</button>
+                              <button class="more-button">•••</button>
+                            </div>
+                
+                            <h2 class="section-title">Popular</h2>
+                        </div>
+                        <div class="songs-media">
+                            <ul></ul>
+                        </div>
+                        <div class="about-container">
+                            <h2 class="about-title">About</h2>
+                            <div class="about-content">
+                              <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="Pritam"
+                                class="profile-image">
+                              <p class="monthly-listeners">40,898,481 monthly listeners</p>
+                              <div class="rank-badge">
+                                <strong>#97</strong>
+                                <div>in the world</div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                 </div>
                 <div class="right-bottom">
@@ -444,8 +491,48 @@
                 </div>
             </div>
         </div>
+        <div class="music-player">
+            <div class="music-player-inner flex">
+                <div class="song flex white-text font">
+                    <div>
+                        <img src="" alt="" class="song-image">
+                    </div>
+                    <div class="song-name"></div>
+                    <img src="svg/add-playlist-icon.svg" alt="" style="height: 12px;">
+                </div>
+                <div class="song-control flex">
+                    <div class="song-control-top flex">
+                        <button class="shuffle-icon" title="Shuffle playlist"><img src="svg/shuffle.svg"></button>
+                        <button class="prev-icon" title="previous song"><img src="svg/prev-icon.svg"
+                                id="previous"></button>
+                        <button class="song-play-icon flex"><img src="svg/play-icon.svg" id="play"></button>
+                        <button class="next-icon" title="next song"><img src="svg/next-icon.svg" id="next"></button>
+                        <button class="loop-icon" title="loop song"><img src="svg/loop-icon.svg"></button>
+                    </div>
+                    <div class="song-control-bottom flex font">
+                        <div class="song-time-start white-text"></div>
+                        <div class="seekbar">
+                            <div class="progress"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="song-time-end white-text"></div>
+                    </div>
+                </div>
+                <div class="song-options flex">
+                    <img src="svg/view.svg" alt="song" title="View Song">
+                    <img src="svg/lyrics.svg" alt="song" title="Show Lyrics">
+                    <img src="svg/queue.svg" alt="song" title="Show Queue">
+                    <img src="svg/connection.svg" alt="song" title="Connect to a device">
+                    <!-- <div class="song-volume">
+                        <img src="svg/volume.svg" alt="song">
+                    </div> -->
+                    <img src="svg/miniplayer.svg" alt="song" title="Open miniplayer">
+                    <img src="svg/expand.svg" alt="song" title="Full Screen">
+                </div>
+            </div>
+        </div>
     </div>
     <script src="buttonToggle.js"></script>
-    <script src="songPlayer.js"></script>
 </body>
+
 </html>
