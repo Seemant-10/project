@@ -664,10 +664,12 @@ body {
 
 .song-control{
     align-items: center;
+    width: 30%;
 }
 .song-control-top{
     margin-top: 15px;
     gap: 30px;
+    justify-content: center;
 }
 .song-control-top .shuffle-icon,
 .song-control-top .prev-icon,
