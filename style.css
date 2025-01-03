@@ -646,52 +646,6 @@ body {
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.2) transparent; 
 }
-.music-player{
-    width: 100%;
-    max-width: 1518px;
-    height: 70px;
-    position: absolute;
-    bottom: 8px;
-    background-color: #000000;
-    /* opacity: 0; */
-}
-.music-player-inner{
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-}
 
 
-.song-control{
-    align-items: center;
-    width: 30%;
-}
-.song-control-top{
-    margin-top: 15px;
-    gap: 30px;
-    justify-content: center;
-}
-.song-control-top .shuffle-icon,
-.song-control-top .prev-icon,
-.song-control-top .next-icon,
-.song-control-top .loop-icon{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-.song-control-top img{
-    height: 16px;
-    width: 16px;
-}
-.song-control-top .song-play-icon{
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background-color: #fff;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-}
 

@@ -1,6 +1,20 @@
 body{
     overflow-x: hidden;
 }
+.music-player{
+    width: 100%;
+    max-width: 1518px;
+    height: 70px;
+    position: absolute;
+    bottom: 8px;
+    background-color: #000000;
+    /* opacity: 0; */
+}
+.music-player-inner{
+    width: 99%;
+    align-items: center;
+    justify-content: space-between;
+}
 .songs-media ul li{
     list-style-type: none;
 }
@@ -28,9 +42,51 @@ body{
 .song-info-inner div{
     font-size: 15px;
 }
+.song{
+    width: 20%;
+    align-items: center;
+    gap: 10px;
+}
+.song-image{
+    border-radius: 4px;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #fff;
+}
 .song-control{
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+.song-control-top{
+    margin-top: 15px;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+.song-control-top .shuffle-icon,
+.song-control-top .prev-icon,
+.song-control-top .next-icon,
+.song-control-top .loop-icon{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.song-control-top img{
+    height: 16px;
+    width: 16px;
+}
+.song-control-top .song-play-icon{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
 }
 .song-info-inner p,
 .song-track,
@@ -39,9 +95,13 @@ body{
     font-size: 14px;
 }
 .song-control-bottom{
-    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
 }
 .song-time-start{
+    width: 45px;
+}
+.song-time-end{
     width: 45px;
 }
 .seekbar{
@@ -62,4 +122,7 @@ body{
     left: 0%;
     transition: left 0.5s;
     cursor: pointer;
+}
+.song-option{
+    width: 20%;
 }

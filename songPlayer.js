@@ -34,12 +34,16 @@ async function getSongDuration(songUrl) {
         });
     });
 }
-const playMusic = (track)=>{
+const playMusic = (track,pause=false)=>{
     // let audio = new Audio("/songs/"+track+".mp3")
     currentSong.src = `https://Seemant-10.github.io/project/songs/${track}.mp3`
-    currentSong.play()
-    play.src = "svg/pause-icon.svg"
-    document.querySelector(".song").innerHTML = track
+    if(!pause){
+        currentSong.play()
+        play.src = "svg/pause-icon.svg"
+    }
+    const songImage = document.querySelector(".song-image")
+    songImage.src = `https://Seemant-10.github.io/project/images/${track}.jpeg`
+    document.querySelector(".song-name").innerHTML = track
     document.querySelector(".song-time-start").innerHTML = "0:00"
     document.querySelector(".song-time-end").innerHTML = "0:00"
 }
@@ -48,8 +52,8 @@ async function main() {
 
     let songs = await getSongs();
     let track = ["580,142,248","207,680,044","359,554,425","421,269,932","169,761,269"];
-
     let songUl = document.querySelector(".songs-media ul");
+    playMusic(songs[0].replace(".mp3",""),true)
 
     for (let i = 0; i < songs.length; i++) {
         const song = songs[i]
