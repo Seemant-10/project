@@ -41,16 +41,15 @@ async function main() {
 
     let songs = await getSongs();
     let track = ["580,142,248","207,680,044","359,554,425","421,269,932","169,761,269"];
-    // console.log(songs);
 
     let songUl = document.querySelector(".songs-media ul");
 
     for (let i = 0; i < songs.length; i++) {
         const song = songs[i]
-        const songUrl = `http://127.0.0.1:5500/songs/${song}`;
+        const songUrl = `https://Seemant-10.github.io/project/songs/${song}`;
         const duration = await getSongDuration(songUrl);
         const formattedDuration = new Date(duration * 1000).toISOString().substr(14, 5); 
-        const imageUrl = `http://127.0.0.1:5500/images/${song.split(".mp3")[0]}.jpeg`;         
+        const imageUrl = `https://Seemant-10.github.io/project/images/${song.split(".mp3")[0]}.jpeg`;
         const songName = song.replace(".mp3", "");
         const songItem = `
             <li>
