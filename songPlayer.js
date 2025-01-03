@@ -14,7 +14,17 @@ async function getSongs() {
     return songs;
 }
 
+function secondsToMinutesSecondes(seconds){
+    if (isNaN(seconds) || seconds < 0) {
+        return "Invalid Input";
+    }
+    const minutes = Math.floor(seconds/60)
+    const remainingSeconds = Math.floor(seconds%60)
 
+    const formattedMinutes = String(minutes).padStart(2,'0')
+    const formattedSecondes = String(remainingSeconds).padStart(2,'0')
+    return `${formattedMinutes}:${formattedSecondes}`
+}
 
 async function getSongDuration(songUrl) {
     return new Promise((resolve) => {
@@ -64,12 +74,15 @@ async function main() {
         songUl.innerHTML += songItem;
     }
     
+    // to display the song name and play song
     Array.from(document.querySelector(".songs-media").getElementsByTagName("li")).forEach(e=>{
         e.addEventListener("click", element=>{
             console.log(e.querySelector("div>.song-info-inner>div").innerHTML)
             playMusic(e.querySelector("div>.song-info-inner>div").innerHTML)
         })
     });
+
+    // play and pause eventlistener
     play.addEventListener("click", ()=>{
         if(currentSong.paused){
             currentSong.play()
@@ -79,6 +92,20 @@ async function main() {
             currentSong.pause()
             play.src = "svg/play-icon.svg"
         }
+    })
+
+        // time update 
+    currentSong.addEventListener("timeupdate", ()=>{
+        document.querySelector(".song-time-start").innerHTML = `${secondsToMinutesSecondes(currentSong.currentTime)}`
+        document.querySelector(".song-time-end").innerHTML = `${secondsToMinutesSecondes(currentSong.duration)}`
+        document.querySelector(".circle").style.left = (currentSong.currentTime/ currentSong.duration)* 100 + "%"
+    })
+
+    // seekbar event listener
+    document.querySelector(".seekbar").addEventListener("click",e=>{
+        let percent = (e.offsetX/e.target.getBoundingClientRect().width) * 100
+        document.querySelector(".circle").style.left = percent + "%"
+        currentSong.currentTime = ((currentSong.duration) * percent)/100
     })
 }
 
