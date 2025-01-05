@@ -25,7 +25,13 @@ const hamburger = document.querySelector(".hamburger");
 
 hamburger.addEventListener("click", () => {
     if (window.innerWidth <= 1240) {
-        leftArea.style.left = leftArea.style.left === "-100%" ? "0" : "-100%";
+        if (leftArea.style.left === "-120%") {
+            leftArea.style.left = "0";
+            leftArea.style.boxShadow = "20px 20px 50px rgb(0, 0, 0)"; 
+        } else {
+            leftArea.style.left = "-120%";
+            leftArea.style.boxShadow = "none"
+        }
     }
 });
 window.addEventListener("resize", () => {

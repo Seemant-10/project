@@ -3,7 +3,7 @@ let currentSong = new Audio();
 let songs;
 
 async function getSongs() {
-    const repoUrl = 'https://api.github.com/repos/Seemant-10/project/contents/songs';
+    const repoUrl = 'https://api.github.com/repos/Seemant-10/project/contents/arijit_songs';
 
     let response = await fetch(repoUrl);
     let data = await response.json();
@@ -39,7 +39,7 @@ const playMusic = (track, pause = false) => {
     try {
         // Check if the track name already includes `.mp3`
         const trackName = track.endsWith('.mp3') ? track : `${track}.mp3`;
-        const songUrl = `https://Seemant-10.github.io/project/songs/${encodeURIComponent(trackName)}`;
+        const songUrl = `https://Seemant-10.github.io/project/arijit_songs/${encodeURIComponent(trackName)}`;
         // console.log("Playing song URL:", songUrl);
 
         currentSong.src = songUrl;
@@ -50,7 +50,7 @@ const playMusic = (track, pause = false) => {
         }
 
         const songImage = document.querySelector(".song-image");
-        const imageUrl = `https://Seemant-10.github.io/project/images/${encodeURIComponent(track.replace('.mp3', ''))}.jpeg`;
+        const imageUrl = `https://Seemant-10.github.io/project/arijit_img/${encodeURIComponent(track.replace('.mp3', ''))}.jpeg`;
         songImage.src = imageUrl;
 
         document.querySelector(".song-name").innerHTML = track.replace('.mp3', '');
@@ -65,16 +65,16 @@ const playMusic = (track, pause = false) => {
 async function main() {
 
     songs = await getSongs();
-    let track = ["580,142,248", "207,680,044", "359,554,425", "421,269,932", "169,761,269"];
+    let track = ["242,090,021", "356,640,518", "458,703,055", "320,220,849", "384,191,653"];
     let songUl = document.querySelector(".songs-media ul");
     playMusic(songs[0].replace(".mp3", ""), true)
 
     for (let i = 0; i < songs.length; i++) {
         const song = songs[i]
-        const songUrl = `https://Seemant-10.github.io/project/songs/${song}`;
+        const songUrl = `https://Seemant-10.github.io/project/arijit_songs/${song}`;
         const duration = await getSongDuration(songUrl);
         const formattedDuration = new Date(duration * 1000).toISOString().substr(14, 5);
-        const imageUrl = `https://Seemant-10.github.io/project/images/${song.split(".mp3")[0]}.jpeg`;
+        const imageUrl = `https://Seemant-10.github.io/project/arijit_img/${song.split(".mp3")[0]}.jpeg`;
         const songName = song.replace(".mp3", "");
         const songItem = `
             <li>
@@ -167,7 +167,7 @@ async function main() {
 
         // Extract the current song name and decode it
         const currentSongName = decodeURIComponent(currentSong.src.split("/").pop());
-        // console.log("Current song name:", currentSongName);
+        console.log("Current song name:", currentSongName);
 
         const index = songs.indexOf(currentSongName);
 
@@ -200,6 +200,7 @@ async function main() {
             }
         }
     });
+
 }
 
 main();

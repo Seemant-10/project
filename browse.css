@@ -1,45 +1,127 @@
-.right-top{
+.hidden-signup,
+.hidden-login {
+    display: none;
+    padding: 4px 8px;
+    height: 40px;
+    margin: 20px 0 -5px 10px;
+}
+
+.hidden-signup p,
+.hidden-login p {
+    color: rgba(179, 179, 179, 1);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.right-top {
     padding: 0px 20.2453px;
 }
-.right-content{
+
+.right-content {
     margin: 48px 0px 0px;
     padding: 0;
-}   
-.right-content-text{
+}
+
+.right-content-text {
     margin-bottom: 8px;
 }
-.right-content-text-h2{
+
+.right-content-text-h2 {
     align-self: flex-end;
     justify-content: flex-end;
 }
-.right-content-cards{
+
+.right-content-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
 }
-.browse-card{
+
+.browse-card {
     padding: 14px;
 }
-.browse-card a{
+
+.browse-card a {
     text-decoration: none;
 }
- .browse-card .browse-card-inner {
+
+.browse-card .browse-card-inner {
     width: 273px;
     height: 153px;
     background-color: #dc148c;
     border-radius: 8px;
     overflow: hidden;
 }
-.browse-card-inner img{
+
+.browse-card-inner img {
     width: 123px;
     height: 123px;
     right: 0;
     transform: rotate(25deg) translate(25%, 19%);
     border-radius: 4px;
 }
-.browse-card-h2{
+
+.browse-card-h2 {
     height: 60px;
     font-size: 25px;
     padding: 16px 40px 16px 16px;
+
+}
+@media (max-width: 1500px){
+    .right-content-cards{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width: 940px){
+    .right-content-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 750px) {
+
+    .container .navbar .header .navigate {
+        display: flex;
+        width: 2070px;
+    }
+
+    .navigate .search-bar {
+        width: 300px;
+    }
+
+    .navigate .search-bar input {
+        border: none;
+    }
+    .header{
+        justify-content: center;
+    }
+
+    .header .logo {
+        opacity: 0;
+    }
+
+    .navbar .home,
+    .navbar .browse-icon {
+        display: none;
+    }
+
+    .login {
+        display: none;
+    }
+
+    .left .hidden-login,
+    .left .hidden-signup {
+        display: flex;
+    }
+}
+@media (max-width: 638px){
+    .right-content-cards{
+        margin: 0 0 0 10%;
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 425px){
+    .navigate .search-bar {
+        width: 270px;
+    }
 
 }

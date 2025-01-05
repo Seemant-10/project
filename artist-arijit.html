@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pritam | Spotify</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="utility.css" />
-  <link rel="stylesheet" href="browse.css" />
   <link rel="icon" href="https://open.spotify.com/favicon.ico" type="image/x-icon" />
-  <title>Spotify - Search</title>
+  <link rel="stylesheet" href="artist-arijit.css" />
+  <script src="arijit_player.js"></script>
 </head>
 
 <body>
@@ -35,8 +36,8 @@
           </div>
         </div>
         <div class="login flex">
-          <button class="sign-up font">Sign Up</button>
-          <button class="log-in font">Log in</button>
+          <a href="sign-up.html"><button class="sign-up font">Sign Up</button></a>
+          <a href="login.html"><button class="log-in font">Log in</button></a>
         </div>
       </div>
     </div>
@@ -62,16 +63,6 @@
               </path>
             </svg>
             <p>Search</p>
-          </div>
-        </a>
-        <a href="sign-up.html" style="text-decoration: none;">
-          <div class="hidden-signup font">
-              <p>Sign up</p>
-          </div>
-        </a>
-        <a href="login.html" style="text-decoration: none;">
-          <div class="hidden-login font">
-              <p>Log In</p>
           </div>
         </a>
         <div class="library flex">
@@ -152,372 +143,55 @@
       <div class="right white-text font">
         <div class="right-top">
           <div class="right-content">
-            <section class="right-content-section">
-              <div class="right-content-text white-text flex">
-                <h2 class="right-content-text-h2">Start Browsing</h2>
+            <div class="first-container">
+              <div class="pritam-img">
+                <div class="artist-content flex">
+                  <!-- Profile Image Circle -->
+                  <div class="profile-circle"></div>
+                  <div class="content">
+                    <div class="verified-container">
+                      <svg data-encore-id="icon" role="img" aria-hidden="true" class="verified-icon"
+                        viewBox="0 0 24 24">
+                        <path
+                          d="M10.814.5a1.658 1.658 0 0 1 2.372 0l2.512 2.572 3.595-.043a1.658 1.658 0 0 1 1.678 1.678l-.043 3.595 2.572 2.512c.667.65.667 1.722 0 2.372l-2.572 2.512.043 3.595a1.658 1.658 0 0 1-1.678 1.678l-3.595-.043-2.512 2.572a1.658 1.658 0 0 1-2.372 0l-2.512-2.572-3.595.043a1.658 1.658 0 0 1-1.678-1.678l.043-3.595L.5 13.186a1.658 1.658 0 0 1 0-2.372l2.572-2.512-.043-3.595a1.658 1.658 0 0 1 1.678-1.678l3.595.043L10.814.5zm6.584 9.12a1 1 0 0 0-1.414-1.413l-6.011 6.01-1.894-1.893a1 1 0 0 0-1.414 1.414l3.308 3.308 7.425-7.425z">
+                        </path>
+                      </svg>
+                      <span class="text1">Verified Artist</span>
+                    </div>
+                    <h1 class="text2">Arijit Singh</h1>
+                    <p class="text3">41,963,858 monthly listeners</p>
+                  </div>
+                </div>
               </div>
-              <div class="right-content-cards">
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex">
-                      <h2 class="browse-card-h2">Music</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf474a477debc822a3a45c5acb" alt="Music" />
-                    </div>
-                  </a>
+            </div>
+            <div class="popular-section">
+              <div class="controls">
+                <button class="play-button">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M8 5v14l11-7z" fill="currentColor" />
+                  </svg>
+                </button>
+                <button class="follow-button">Follow</button>
+                <button class="more-button">•••</button>
+              </div>
+
+              <h2 class="section-title">Popular</h2>
+            </div>
+            <div class="songs-media">
+              <ul></ul>
+            </div>
+            <div class="about-container">
+              <h2 class="about-title">About</h2>
+              <div class="about-content">
+                <img src="https://i.scdn.co/image/ab676161000051745ba2d75eb08a2d672f9b69b7" alt="Arijit"
+                  class="profile-image2" />
+                <p class="monthly-listeners">41,963,858 Monthly Listeners</p>
+                <div class="rank-badge">
+                  <strong>#88</strong>
+                  <div>in the world</div>
                 </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #006450">
-                      <h2 class="browse-card-h2">Podcasts</h2>
-                      <img src="https://i.scdn.co/image/ab6765630000ba8a81f07e1ead0317ee3c285bfa" alt="Podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)" />
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #8400e7">
-                      <h2 class="browse-card-h2">Live Events</h2>
-                      <img src="	https://concerts.spotifycdn.com/images/live-events_category-image.jpg" alt="Podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)" />
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #148A08;">
-                      <h2 class="browse-card-h2">2025 in Music</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf3a376f97c4510dd35ef8118b" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #DC148C;">
-                      <h2 class="browse-card-h2">2025 in Podcasts</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf90d9ad8b29f59a37da33aeea" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #1E3264;">
-                      <h2 class="browse-card-h2">Made For You</h2>
-                      <img src="https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #608108;">
-                      <h2 class="browse-card-h2">New Releases</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf194fec0fdc197fb9e4fe8e64" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #B02897;">
-                      <h2 class="browse-card-h2">Punjabi</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf4f1aa71a9cdcffdf8430c070" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #BA5D07;">
-                      <h2 class="browse-card-h2">Tamil</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005cafae68f35dc5d86af7a1c1b58f" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #BA5D07;">
-                      <h2 class="browse-card-h2">Telegu</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf80699a8b7d59a21b38f964bd" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #0d73EC;">
-                      <h2 class="browse-card-h2">Podcast Charts</h2>
-                      <img src="https://t.scdn.co/images/7262179db37c498480ef06bfacb60310.jpeg" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #8E66AC;">
-                      <h2 class="browse-card-h2">Podcast New Releases</h2>
-                      <img src="https://t.scdn.co/images/209c867f5bb34076b0dcc9deeb1868e6" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #E13300;">
-                      <h2 class="browse-card-h2">Video Podcasts</h2>
-                      <img src="https://i.scdn.co/image/9af79fd06e34dea3cd27c4e1cd6ec7343ce20af4" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #777777;">
-                      <h2 class="browse-card-h2">Business & Technology</h2>
-                      <img src="https://i.scdn.co/image/e227cd9674618024276c65f1213fb05af34cf512" alt="podcasts"
-                        style="transform: rotate(25deg) translate(-5%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #8d67ab;">
-                      <h2 class="browse-card-h2">Charts</h2>
-                      <img
-                        src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg"
-                        alt="podcasts" style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #477D95;">
-                      <h2 class="browse-card-h2" style="font-size: 20px;">Malayalam</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf77a5fdbc439492d09d3d84fb" alt="podcasts"
-                        style="transform: rotate(25deg) translate(-5%, 30%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #E13300;">
-                      <h2 class="browse-card-h2">Bhojpuri</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005cafe362fbcb5932b28679cf00f8" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #8c1932;">
-                      <h2 class="browse-card-h2">Happy Holidays</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200008e2c64adf130003faa51378e3d2b" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #27856a;">
-                      <h2 class="browse-card-h2">Summmer</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf097a46192e6bb67e52cdff60" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #777777;">
-                      <h2 class="browse-card-h2">Ghazals</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf666a4ae3e6161da7a120ca14" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #477d95;">
-                      <h2 class="browse-card-h2">Pop</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf66d545e6a69d0bfe8bd1e825" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #e91429;">
-                      <h2 class="browse-card-h2">Indie</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005cafa1a252e3a815b65778d8c2aa" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #dc148c;">
-                      <h2 class="browse-card-h2">Love&nbsp;&nbsp;</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf21c9a95a2702ce535fb07915" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #b02897;">
-                      <h2 class="browse-card-h2">Trending</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf8e97784ff1e12e67ae922715" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #E1118c;">
-                      <h2 class="browse-card-h2">Mood</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005cafe542e9b59b1d2ae04b46b91c" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #8d67ab;">
-                      <h2 class="browse-card-h2">Party&nbsp;&nbsp;</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf0b0d0bfac454671832311615" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #c39687;">
-                      <h2 class="browse-card-h2">Devotional</h2>
-                      <img src="https://t.scdn.co/images/ad3e3f8f80eb494d998a435f7a5ae8c7" alt="podcasts"
-                        style="transform: rotate(24deg) translate(2%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #a56752;">
-                      <h2 class="browse-card-h2">Decades</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005cafb7e805033eb938aa75d09336" alt="podcasts"
-                        style="transform: rotate(25deg) translate(5%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #477d95;">
-                      <h2 class="browse-card-h2">Hip-Hop</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf5f3752b3234e724f9cd6056f" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #477d95;">
-                      <h2 class="browse-card-h2">Dance</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf26ada793217994216c79dad8" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #af2896;">
-                      <h2 class="browse-card-h2">Student</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005cafdad1281e13697e8d8cf8f347" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #b06239;">
-                      <h2 class="browse-card-h2">Chill&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf330ca3a3bfaf8b18407fb33e" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #e8115b;">
-                      <h2 class="browse-card-h2">Gaming</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf26dd3719e8824756914ae61f" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #e61e32;">
-                      <h2 class="browse-card-h2">K-pop</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf4b42030ee01cf793663dbb73" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #777777;">
-                      <h2 class="browse-card-h2">Workout</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf6af6d83c78493644c9b0627b" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #148A08;">
-                      <h2 class="browse-card-h2">RADAR</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf5b340bd0664da28003741733" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #006450;">
-                      <h2 class="browse-card-h2">Fresh Finds</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005cafcc1499bbb8565f490858c2bc" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #1e3264;">
-                      <h2 class="browse-card-h2">Sleep</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf1cef0cee1e498abb8e74955f" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #7d4b32;">
-                      <h2 class="browse-card-h2">Indian Classical</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf3a3e91f32b562c1c85af3288" alt="podcasts"
-                        style="transform: rotate(25deg) translate(15%, 25%)">
-                    </div>
-                  </a>
-                </div>
-                <div class="browse-card">
-                  <a href="" class="white-text">
-                    <div class="browse-card-inner flex" style="background-color: #537aa1;">
-                      <h2 class="browse-card-h2">Instrumental</h2>
-                      <img src="https://i.scdn.co/image/ab67fb8200005caf44774504bdbe31a7bc45598c" alt="podcasts"
-                        style="transform: rotate(25deg) translate(-25%, 35%)">
-                    </div>
-                  </a>
-                </div>
-            </section>
+              </div>
+            </div>
           </div>
         </div>
         <div class="right-bottom">
@@ -634,19 +308,21 @@
               No credit card needed.
             </p>
           </div>
-          <button>Sign up for free</button>
+          <a href="sign-up.html" class="flex"><button>Sign up for free</button></a>
         </div>
       </footer>
     </div>
     <div>
-      <div class="container-lang" id="container-lang" style="display: none;">
+      <div class="container-lang" id="container-lang" style="display: none">
         <div class="lang-area" id="lang-area">
           <div class="lang-area-top flex">
             <div class="lang-area-text white-text font">
               <h1>Choose a language</h1>
               <p>This updates what you read on open.spotify.com</p>
             </div>
-            <button class="flex" id="close-icon"><img src="svg/close-icon.svg" alt="close-icon"></button>
+            <button class="flex" id="close-icon">
+              <img src="svg/close-icon.svg" alt="close-icon" />
+            </button>
           </div>
           <div class="lang-area-bottom">
             <button class="lang-area-bottom-button font">
@@ -665,12 +341,10 @@
               <span>عربي مصري</span><span class="lang-area-bottom-span">Arabic (Egypt)</span>
             </button>
             <button class="lang-area-bottom-button font">
-              <span>العَرَبِيَّة مغربي</span><span class="lang-area-bottom-span">Arabic
-                (Morocco)</span>
+              <span>العَرَبِيَّة مغربي</span><span class="lang-area-bottom-span">Arabic (Morocco)</span>
             </button>
             <button class="lang-area-bottom-button font">
-              <span>العربية السعودية</span><span class="lang-area-bottom-span">Arabic (Saudi
-                Arabia)</span>
+              <span>العربية السعودية</span><span class="lang-area-bottom-span">Arabic (Saudi Arabia)</span>
             </button>
             <button class="lang-area-bottom-button font">
               <span>Azərbaycanca</span><span class="lang-area-bottom-span">Azerbaijani</span>
@@ -706,12 +380,10 @@
               <span>English</span><span class="lang-area-bottom-span">United Kingdom</span>
             </button>
             <button class="lang-area-bottom-button font">
-              <span>Español de España</span><span class="lang-area-bottom-span">European
-                Spanish</span>
+              <span>Español de España</span><span class="lang-area-bottom-span">European Spanish</span>
             </button>
             <button class="lang-area-bottom-button font">
-              <span>Español (Argentina)</span><span class="lang-area-bottom-span">Spanish
-                (Argentina)</span>
+              <span>Español (Argentina)</span><span class="lang-area-bottom-span">Spanish (Argentina)</span>
             </button>
             <button class="lang-area-bottom-button font">
               <span>Español (México)</span><span class="lang-area-bottom-span">Spanish (Mexico)</span>
@@ -813,8 +485,7 @@
               <span>Polski</span><span class="lang-area-bottom-span">Polish</span>
             </button>
             <button class="lang-area-bottom-button font">
-              <span>Português do Brasil</span><span class="lang-area-bottom-span">Portuguese
-                (Brazil)</span>
+              <span>Português do Brasil</span><span class="lang-area-bottom-span">Portuguese (Brazil)</span>
             </button>
             <button class="lang-area-bottom-button font">
               <span>Português</span><span class="lang-area-bottom-span">European Portuguese</span>
@@ -865,8 +536,7 @@
               <span>简体中文</span><span class="lang-area-bottom-span">Simplified Chinese</span>
             </button>
             <button class="lang-area-bottom-button font">
-              <span>繁體中文 (香港)</span><span class="lang-area-bottom-span">Chinese(Traditional) Hong
-                Kong</span>
+              <span>繁體中文 (香港)</span><span class="lang-area-bottom-span">Chinese(Traditional) Hong Kong</span>
             </button>
             <button class="lang-area-bottom-button font">
               <span>中文</span><span class="lang-area-bottom-span">Traditional Chinese</span>
@@ -875,6 +545,46 @@
               <span>isiZulu</span><span class="lang-area-bottom-span">Zulu</span>
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="music-player">
+      <div class="music-player-inner flex">
+        <div class="song flex white-text font">
+          <div>
+            <img src="" alt="" class="song-image">
+          </div>
+          <div class="song-name"></div>
+          <img src="svg/add-playlist-icon.svg" alt="" style="height: 12px;">
+        </div>
+        <div class="song-control flex">
+          <div class="song-control-top flex">
+            <button class="shuffle-icon" title="Shuffle playlist"><img src="svg/shuffle.svg"></button>
+            <button class="prev-icon" title="previous song"><img src="svg/prev-icon.svg" id="previous"></button>
+            <button class="song-play-icon flex"><img src="svg/play-icon.svg" id="play"></button>
+            <button class="next-icon" title="next song"><img src="svg/next-icon.svg" id="next"></button>
+            <button class="loop-icon" title="loop song"><img src="svg/loop-icon.svg"></button>
+          </div>
+          <div class="song-control-bottom flex font">
+            <div class="song-time-start white-text"></div>
+            <div class="seekbar">
+              <div class="progress"></div>
+              <div class="circle"></div>
+            </div>
+            <div class="song-time-end white-text"></div>
+          </div>
+        </div>
+        <div class="song-options flex">
+          <img src="svg/view.svg" alt="song" title="View Song" class="view">
+          <img src="svg/lyrics.svg" alt="song" title="Show Lyrics" class="lyrics">
+          <img src="svg/queue.svg" alt="song" title="Show Queue" class="queue">
+          <img src="svg/connection.svg" alt="song" title="Connect to a device" class="connection">
+          <div class="song-volume flex">
+            <img src="svg/volume.svg" alt="song">
+            <input type="range" min="0" max="100" value="30">
+          </div>
+          <img src="svg/miniplayer.svg" alt="song" title="Open miniplayer" class="miniplayer">
+          <img src="svg/expand.svg" alt="song" title="Full Screen" class="expand">
         </div>
       </div>
     </div>
