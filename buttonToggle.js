@@ -18,3 +18,20 @@ closeIcon.addEventListener('click', function (event) {
     containerLang.style.display = 'none';
 });
 document.addEventListener('click', handleClickOutside);
+
+// event listener for hamburger
+const leftArea = document.querySelector(".left");
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", () => {
+    if (window.innerWidth <= 1240) {
+        leftArea.style.left = leftArea.style.left === "-100%" ? "0" : "-100%";
+    }
+});
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 1240) {
+        leftArea.style.left = "";
+    } else {
+        leftArea.style.left = "-100%";
+    }
+});
