@@ -25,11 +25,11 @@ const hamburger = document.querySelector(".hamburger");
 
 hamburger.addEventListener("click", () => {
     if (window.innerWidth <= 1240) {
-        if (leftArea.style.left === "-120%") {
+        if (leftArea.style.left === "-150%") {
             leftArea.style.left = "0";
             leftArea.style.boxShadow = "20px 20px 50px rgb(0, 0, 0)"; 
         } else {
-            leftArea.style.left = "-120%";
+            leftArea.style.left = "-150%";
             leftArea.style.boxShadow = "none"
         }
     }

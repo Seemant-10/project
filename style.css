@@ -15,6 +15,7 @@ body {
 }
 
 .navbar {
+    position: sticky;
     height: 64px;
     margin: -8px;
     padding: 8px;
@@ -815,9 +816,9 @@ body {
 @media (max-width: 1240px) {
     .left {
         width: 375px;
-        height: 100vh;
+        height: 79vh;
         position: absolute;
-        left: -120%;
+        left: -150%;
         transition: all 0.3s ease;
         z-index: 1;
     }
@@ -878,12 +879,13 @@ body {
     .music-player .music-player-inner{
         flex-direction: column;
         height: 200px;
-        
+        justify-content: space-evenly;
     }
     .music-player .song,
     .music-player .song-control,
     .music-player .song-options{
         width: 100%;
+        justify-content: center;
     }
     .about-container{
         height: 500px;
